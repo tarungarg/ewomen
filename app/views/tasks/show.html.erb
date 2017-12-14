@@ -1,0 +1,22 @@
+<div class="page-header">
+  <%= link_to project_path(@project), class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <h1>Show task</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Project Name:</dt>
+  <dd><%= @task.project.name %></dd>
+
+  <dt>Task Name:</dt>
+  <dd><%= @task.name %></dd>
+
+  <dt>Task Description:</dt>
+  <dd><%= @task.description %></dd>
+
+  <dt>Assigned Users:</dt>
+  <dd><%= @task.users.map(&:name).join(', ') %></dd>
+
+</dl>
